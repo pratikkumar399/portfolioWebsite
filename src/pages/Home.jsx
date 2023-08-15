@@ -1,12 +1,14 @@
-import { Navbar } from "../components/Navbar"
+import Footer from "../components/Footer"
+import Hero from "../components/Hero"
+import Navbar from "../components/Navbar"
 
 const Home = () => {
     return (
-        <div>
-            This is the Home page
-
+        <>
             <Navbar />
-        </div>
+            <Hero />
+            <Footer />
+        </>
     )
 }
 
