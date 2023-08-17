@@ -1,29 +1,72 @@
 import React from 'react';
+import img from "../assets/img.jpg"
+import { FaNodeJs, FaReact } from "react-icons/fa";
+import { DiJavascript1, DiMongodb } from "react-icons/di";
+import { TypeAnimation } from 'react-type-animation';
+
 
 const Hero = () => {
     return (
-        <section className="min-h-96 relative flex flex-1 shrink-0 items-center justify-center overflow-hidden rounded-lg bg-gray-100 py-16 shadow-lg md:py-20 xl:py-48">
-            {/* <!-- image - start --> */}
-            <img src="https://images.unsplash.com/photo-1618004652321-13a63e576b80?auto=format&q=75&fit=crop&w=1500" loading="lazy" alt="Photo by Fakurian Design" className="absolute inset-0 h-full w-full object-cover object-center" />
-            {/* <!-- image - end --> */}
-
-            {/* <!-- overlay - start --> */}
-            <div className="absolute inset-0 bg-indigo-500 mix-blend-multiply"></div>
-            {/* <!-- overlay - end --> */}
-
-            {/* <!-- text start --> */}
-            <div className="relative flex flex-col items-center p-4 sm:max-w-xl">
-                <p className="mb-4 text-center text-lg text-indigo-200 sm:text-xl md:mb-8">I am Pratik Rai</p>
-                <h1 className="mb-8 text-center text-4xl font-bold text-white sm:text-5xl md:mb-12 md:text-6xl">Mern Stack Developer at CodeNexus</h1>
-
-                <div className="flex w-full flex-col gap-2.5 sm:flex-row sm:justify-center">
-                    <a href="#" className="inline-block rounded-lg bg-indigo-500 px-8 py-3 text-center text-sm font-semibold text-white outline-none ring-indigo-300 transition duration-100 hover:bg-indigo-600 focus-visible:ring active:bg-indigo-700 md:text-base">Download resume</a>
-
-                    <a href="#" className="inline-block rounded-lg bg-gray-200 px-8 py-3 text-center text-sm font-semibold text-gray-500 outline-none ring-indigo-300 transition duration-100 hover:bg-gray-300 focus-visible:ring active:text-gray-700 md:text-base">Take tour</a>
+        <section>
+            <div className="px-4 py-12 mx-auto max-w-5xl sm:px-20 md:px-40 lg:px-24 lg:py-24">
+                <div className="flex flex-wrap items-center mx-auto max-w-7xl">
+                    <div className="w-full lg:max-w-lg lg:w-1/2 rounded-xl">
+                        <div>
+                            <div className="relative w-full max-w-lg">
+                                <div className="absolute top-0 rounded-full bg-violet-300 -left-4 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob" />
+                                <div className="absolute rounded-full bg-fuchsia-300 -bottom-24 right-20 w-72 h-72 mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-4000" />
+                                <div className="relative  mx-auto ">
+                                    <img
+                                        className="object-cover object-center mx-auto rounded-lg shadow-2xl"
+                                        alt="hero"
+                                        src={img}
+                                    />
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div className="flex flex-col items-start mt-12 mb-16 text-left lg:flex-grow lg:w-1/2 lg:pl-6 xl:pl-24 md:mb-0 xl:mt-0">
+                        <span className="mb-8 text-xs font-bold tracking-widest text-blue-600 uppercase">
+                            {" "}
+                            I am{" "}
+                        </span>
+                        <h1 className="fontC  mb-8 text-4xl font-bold leading-none tracking-tighter md:text-7xl lg:text-5xl">
+                            Pratik Rai
+                        </h1>
+                        <p className="mb-8 text-xl leading-relaxed text-left   sfont ">
+                            <TypeAnimation
+                                sequence={[
+                                    "I'm a Mern Stack Developer",
+                                    1000,
+                                    "I'm a Problem Solver",
+                                    1000,
+                                    "I'm a Student",
+                                    1000,
+                                ]}
+                                speed={50}
+                                repeat={Infinity}
+                                style={{ fontSize: '1.5em' }}
+                            />
+                        </p>
+                        <div className="flex flex-wrap w-full mt-2 -mx-4 text-left">
+                            <div className="w-1/4 p-4 mt-4 sm:w-1/4">
+                                <DiJavascript1 />
+                            </div>
+                            <div className="w-1/4 p-4 mt-4 sm:w-1/4">
+                                <FaNodeJs />
+                            </div>
+                            <div className="w-1/4 p-4 mt-4 sm:w-1/4">
+                                <FaReact />
+                            </div>
+                            <div className="w-1/4 p-4 mt-4 sm:w-1/4">
+                                <DiMongodb />
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
-            {/* <!-- text end --> */}
         </section>
+
     );
 };
 

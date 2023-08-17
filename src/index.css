@@ -1,3 +1,34 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+  
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.headings {
+    font-family: Montserrat,sans-serif;
+}
+
+.main-font {
+    font-family: Poppins;
+}
+
+.active-link{
+    border-bottom: 2px solid #e26959;
+    width: 50%;
+    margin: auto;
+}
+
+.fontC{
+    color: #28183b;
+}
+
+.sfont{
+    color:#000;
+    font-family: Poppins,sans-serif
+}

@@ -1,8 +1,9 @@
 // styles.js
 const colors = {
-    primary: '#001F3F',    // Example primary color
-    accent: '#BDBDBD',     // Example accent color
-    background: '#F5F5F5', // Example background color
+    primary: '#28183b',    // Example primary color
+    accent: '#BDBDBD',
+    buttonback: "#e26959",     // Example accent color
+    background: '#272626', // Example background color
     text: '#212529',       // Example text color
     // Add more colors as needed
 };

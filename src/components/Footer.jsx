@@ -1,37 +1,86 @@
-import React from 'react'
+import colors from '../constants/styles'
+// import { VscGithub } from "react-icons/vsc";
+import { FaGithub, FaLinkedin, FaLink } from 'react-icons/fa';
+import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer className="px-4 py-8 dark:bg-gray-800 dark:text-gray-400">
-            <div className="container flex flex-wrap items-center justify-center mx-auto space-y-4 sm:justify-between sm:space-y-0">
-                <div className="flex flex-row pr-3 space-x-4 sm:space-x-8">
-                    <div className="flex items-center justify-center flex-shrink-0 w-12 h-12 rounded-full dark:bg-violet-400">
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" fill="currentColor" className="w-5 h-5 rounded-full dark:text-gray-900">
-                            <path d="M18.266 26.068l7.839-7.854 4.469 4.479c1.859 1.859 1.859 4.875 0 6.734l-1.104 1.104c-1.859 1.865-4.875 1.865-6.734 0zM30.563 2.531l-1.109-1.104c-1.859-1.859-4.875-1.859-6.734 0l-6.719 6.734-6.734-6.734c-1.859-1.859-4.875-1.859-6.734 0l-1.104 1.104c-1.859 1.859-1.859 4.875 0 6.734l6.734 6.734-6.734 6.734c-1.859 1.859-1.859 4.875 0 6.734l1.104 1.104c1.859 1.859 4.875 1.859 6.734 0l21.307-21.307c1.859-1.859 1.859-4.875 0-6.734z"></path>
-                        </svg>
+        <footer style={{ backgroundColor: colors.background }} className="bg-white dark:bg-gray-900 font-mono font-semibold ">
+            <div className="container px-6 py-8 mx-auto">
+                <div className="flex flex-col items-center text-center">
+                    <Link to="#">
+                        <p className="w-auto h-7 text-white headings"
+                        >Pratik Rai</p>
+                    </Link>
+                    <div className="flex flex-wrap justify-center mt-6 -mx-4">
+                        <Link
+                            to="#"
+                            className="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+                            aria-label="Reddit"
+                        >
+                            {" "}
+                            About{" "}
+                        </Link>
+                        <Link
+                            to="#"
+                            className="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+                            aria-label="Reddit"
+                        >
+                            {" "}
+                            Projects{" "}
+                        </Link>
+                        <Link
+                            to="#"
+                            className="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+                            aria-label="Reddit"
+                        >
+                            {" "}
+                            Contact Me{" "}
+                        </Link>
+                        <Link
+                            to="#"
+                            className="mx-4 text-sm text-gray-600 transition-colors duration-300 hover:text-blue-500 dark:text-gray-300 dark:hover:text-blue-400"
+                            aria-label="Reddit"
+                        >
+                            {" "}
+                            Mail{" "}
+                        </Link>
+
                     </div>
-                    <ul className="flex flex-wrap items-center space-x-4 sm:space-x-8">
-                        <li>
-                            <a rel="noopener noreferrer" href="#">Terms of Use</a>
-                        </li>
-                        <li>
-                            <a rel="noopener noreferrer" href="#">Privacy</a>
-                        </li>
-                    </ul>
                 </div>
-                <ul className="flex flex-wrap pl-3 space-x-4 sm:space-x-8">
-                    <li>
-                        <a rel="noopener noreferrer" href="#">Instagram</a>
-                    </li>
-                    <li>
-                        <a rel="noopener noreferrer" href="#">Facebook</a>
-                    </li>
-                    <li>
-                        <a rel="noopener noreferrer" href="#">Twitter</a>
-                    </li>
-                </ul>
+                <hr className="my-6 border-gray-200 md:my-10 dark:border-gray-700" />
+                <div className="flex flex-col items-center sm:flex-row sm:justify-between">
+                    <p className="text-sm text-gray-500 dark:text-gray-300">
+                        Made with ❤️ by Pratik Rai
+                    </p>
+                    <div className="flex -mx-2">
+                        <Link
+                            to="#"
+                            className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                            aria-label="Reddit"
+                        >
+                            <FaGithub />
+
+                        </Link>
+                        <Link
+                            to="#"
+                            className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                            aria-label="Facebook"
+                        >
+                            <FaLinkedin />
+                        </Link>
+                        <Link
+                            to="#"
+                            className="mx-2 text-gray-600 transition-colors duration-300 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
+                            aria-label="Github"
+                        >
+                            <FaLink />
+                        </Link>
+                    </div>
+                </div>
             </div>
         </footer>
+
     )
 }
 
