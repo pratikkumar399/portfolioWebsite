@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom";
 import color from '../constants/styles'
 import { useState } from "react";
-
+import resume from '../assets/resume.pdf'
 
 const Navbar = () => {
     const [menuOpen, setMenuOpen] = useState(false);
@@ -24,8 +24,12 @@ const Navbar = () => {
 
         <>
             <nav className="relative px-4 py-4 flex justify-between items-center bg-white">
-                <Link className="text-3xl font-bold leading-none headings" to="/">
-                    PRATIK
+                <Link style={{
+                    color: color.primary,
+                    textShadow: `1 1 1rem ${color.buttonback}`
+
+                }} className="text-3xl font-bold leading-none headings" to="/">
+                    Pratik Rai
                 </Link>
                 <div className="lg:hidden">
                     <button className="navbar-burger flex items-center text-blue-600 p-3" onClick={toggleMenu} >
@@ -102,17 +106,18 @@ const Navbar = () => {
 
                 </ul>
 
-                <Link
+                <a
                     style={{
                         // color: color.primary
                         backgroundColor: color.buttonback,
                         color: color.text
                     }}
                     className="hidden lg:inline-block py-2 px-5  justify-center items-center gap-2 rounded-md border border-transparent font-semibold  text-black  focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800"
-                    to="/resume"
+                    href={resume}
+                    download
                 >
                     RESUME
-                </Link>
+                </a>
             </nav>
             <div className={`navbar-menu relative z-50 ${menuOpen ? 'block' : 'hidden'}`}>
                 <div className="navbar-backdrop fixed inset-0 bg-gray-800 opacity-25" />
