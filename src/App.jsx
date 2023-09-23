@@ -1,10 +1,10 @@
 import './App.css'
 import { BrowserRouter as Router, Routes, Route, Outlet } from 'react-router-dom'
-import About from './pages/About'
+import Intro from './pages/Intro'
 import Navbar from './components/Navbar';
 import Projects from './pages/Projects';
 import Footer from './components/Footer';
-import Contact from './pages/Contact';
+import About from './pages/AboutMe';
 
 
 const Layout = () => {
@@ -30,10 +30,10 @@ function App() {
       <Router>
         <Routes>
           <Route path='/' element={<Layout />} >
-            <Route index element={<About />} />
-            <Route path="/about" element={<About />} />
+            <Route index element={<Intro />} />
+            <Route path="/intro" element={<Intro />} />
             <Route path='/projects' element={<Projects />} />
-            <Route path='/contact' element={<Contact />} />
+            <Route path='/about' element={<About />} />
           </Route>
         </Routes>
       </Router>

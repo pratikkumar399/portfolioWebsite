@@ -3,6 +3,7 @@ import colors from '../constants/styles';
 import blog from '../assets/blog.png';
 import collegegram from '../assets/collegegram.png';
 import subscription from '../assets/subscription.png';
+import siksha from '../assets/shikha.png';
 
 const projectData = [
     {
@@ -10,6 +11,7 @@ const projectData = [
         desc: "A blog Website",
         link: "https://bloggerszone.vercel.app/",
         src: blog,
+        solo: "solo",
         github: "https://github.com/pratikkumar399/bloggerszone",
         skills: "React, NodeJs, Express, MongoDB",
     },
@@ -17,6 +19,7 @@ const projectData = [
         title: "CollegeGram",
         desc: "A social media website for college students",
         link: "https://github.com/pratikkumar399/collegegram",
+        solo: "solo",
         src: collegegram,
         github: "https://github.com/pratikkumar399/collegegram",
         skills: "React, NodeJs, MongoDB",
@@ -25,14 +28,17 @@ const projectData = [
         title: "Subscription Website",
         desc: "A website where users can subscribe to a plan and pay for it",
         link: "https://subscription-app-7yvq.vercel.app/",
+        solo: "solo",
         src: subscription,
         github: "https://github.com/pratikkumar399/SubscriptionApp",
         skills: "React, Firebase, Stripe, NodeJs ",
     },
     {
-        title: "Portfolio Website",
-        desc: "My personal portfolio showcasing my work",
+        title: "Shiksha Miraz",
+        desc: "A flutter based website for education purpose",
         link: "https://yourname.dev/",
+        solo: "group",
+        src: siksha,
         github: "https://github.com/yourusername/portfolio",
         skills: "HTML, CSS, JavaScript",
     },
@@ -40,6 +46,7 @@ const projectData = [
         title: "Portfolio Website",
         desc: "My personal portfolio showcasing my work",
         link: "https://yourname.dev/",
+        src: subscription,
         github: "https://github.com/yourusername/portfolio",
         skills: "HTML, CSS, JavaScript",
     },
@@ -47,6 +54,7 @@ const projectData = [
         title: "Portfolio Website",
         desc: "My personal portfolio showcasing my work",
         link: "https://yourname.dev/",
+        src: subscription,
         github: "https://github.com/yourusername/portfolio",
         skills: "HTML, CSS, JavaScript",
     },
@@ -64,7 +72,7 @@ const Projects = () => {
                 {projectData.map((project, index) => (
                     <ProjectCard
                         key={index}
-                        solo="solo"
+                        solo={project.solo}
                         title={project.title}
                         src={project.src} // You might want to use a specific image for each project
                         desc={project.desc}

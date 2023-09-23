@@ -43,14 +43,15 @@ const Navbar = () => {
                         </svg>
                     </button>
                 </div>
-                <ul className="font-mono hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
+                <ul
+                    className="font-mono hidden absolute top-1/2 left-1/2 transform -translate-y-1/2 -translate-x-1/2 lg:mx-auto lg:flex lg:items-center lg:w-auto lg:space-x-6">
                     <li>
                         <Link
                             style={{
                                 color: color.primary
                             }}
-                            className="text-lg focus:font-bold active-link" to="/About">
-                            About
+                            className="text-lg focus:font-bold active-link" to="/intro">
+                            Intro
                         </Link>
                     </li>
                     <li className="text-gray-300">
@@ -99,8 +100,8 @@ const Navbar = () => {
                             style={{
                                 color: color.primary
                             }}
-                            className="text-lg focus:font-bold active-link" to="/contact">
-                            Contact Me
+                            className="text-lg focus:font-bold active-link" to="/about">
+                            About Me
                         </Link>
                     </li>
 

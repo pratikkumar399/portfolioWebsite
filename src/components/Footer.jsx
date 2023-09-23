@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Footer = () => {
     return (
-        <footer style={{ backgroundColor: colors.background }} className="bg-white dark:bg-gray-900 font-mono font-semibold ">
+        <footer className="bg-white dark:bg-black font-mono font-semibold ">
             <div className="container px-6 py-8 mx-auto">
                 <div className="flex flex-col items-center text-center">
                     <Link to="#">
@@ -19,7 +19,7 @@ const Footer = () => {
                             aria-label="Reddit"
                         >
                             {" "}
-                            About{" "}
+                            Intro{" "}
                         </Link>
                         <Link
                             to="#"
@@ -35,7 +35,7 @@ const Footer = () => {
                             aria-label="Reddit"
                         >
                             {" "}
-                            Contact Me{" "}
+                            About Me{" "}
                         </Link>
                         <Link
                             to="#"

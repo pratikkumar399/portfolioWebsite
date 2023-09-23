@@ -2,14 +2,14 @@ import colors from '../constants/styles';
 import { Link } from "react-router-dom";
 import blog from '../assets/blog.png';
 
-const ProjectCard = ({ solo, src, title, desc, skills, link, github }) => {
+const ProjectCard = ({ solo = "solo", src, title, desc, skills, link, github }) => {
     return (
         <div className="max-w-sm bg-white p-6 rounded-xl shadow-lg transform hover:scale-105 transition duration-500">
 
             <div className="relative">
                 <Link to={github}>
                     <img
-                        className="w-full rounded-xl"
+                        className="w-full h-50 cover rounded-xl"
                         src={src}
                     />
                 </Link>
